@@ -1,0 +1,3 @@
+tic_tac_toe.rb and all rspec files credited to App Academy
+
+This program implements an AI player for tic tac toe that uses a tree to select the best possible move each round.
