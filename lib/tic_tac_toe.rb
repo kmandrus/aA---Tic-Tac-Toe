@@ -79,6 +79,15 @@ class Board
   def won?
     !winner.nil?
   end
+
+  def each_with_pos(&prc)
+    rows.each_with_index do |row, row_num|
+      row.each_with_index do |square, col_num|
+        pos = [row_num, col_num]
+        prc.call(square, pos)
+      end
+    end
+  end
 end
 
 # Notice how the Board has the basic rules of the game, but no logic
